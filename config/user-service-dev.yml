@@ -15,6 +15,12 @@ eureka:
     service-url:
       defaultZone: http://eureka1:2001/eureka,  http://eureka2:2002/eureka
 
+#暴露刷新断点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
 
 
 ---
@@ -31,9 +37,3 @@ spring:
 server:
   port: 8102
   
-#暴露刷新断点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh

@@ -2,9 +2,12 @@ spring:
   application:
     name: user-service
  
-server:
- port: 8101
-
+#暴露刷新断点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
 
 sp:
   user-service:
@@ -15,12 +18,7 @@ eureka:
     service-url:
       defaultZone: http://eureka1:2001/eureka,  http://eureka2:2002/eureka
 
-#暴露刷新断点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh
+
 
 
 ---

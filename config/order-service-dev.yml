@@ -31,14 +31,9 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: hystrix.stream  refresh
         
-#暴露刷新断点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh       
+     
 ---
 spring:
   profiles: order1

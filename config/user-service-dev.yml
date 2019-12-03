@@ -4,12 +4,10 @@ spring:
  
 #暴露刷新断点
 management:
-  server:
-    port: 8101
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: "*"
 
 sp:
   user-service:
